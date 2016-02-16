@@ -9,18 +9,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_info"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_camera" />
+        android:layout_height="100dp"
+        android:layout_x="0px"
+        android:layout_y="50dp"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_info" />
+    </ScrollView>
 
     <Button
         android:id="@+id/btn_click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_info"
-        android:layout_marginTop="41dp"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginTop="35dp"
         android:text="@string/btn_click" />
 
     <Button
@@ -28,14 +37,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_click"
-        android:layout_marginTop="62dp"
-        android:text="Cihaz Özellikleri Neler?" />
+        android:layout_marginTop="35dp"
+        android:text="@string/btn_cihaz_ozellikleri" />
 
     <Button
         android:id="@+id/btn_cihaz_api"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_cihaz_ozellikleri"
-        android:layout_marginTop="51dp"
-        android:text="Cihazin API Nedir?" />
+        android:layout_marginTop="35dp"
+        android:text="@string/btn_cihaz_api" />
 </RelativeLayout>

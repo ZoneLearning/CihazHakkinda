@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         btn_cihazApi = (Button) findViewById(R.id.btn_cihaz_api);
 
         Camera camera = new Camera(this, tv_info, btn_camera);
+        TumOzellikler tumOzellikler = new TumOzellikler(this,tv_info,btn_cihazOzellikleri);
+        CihazAPI cihazAPI = new CihazAPI(this,tv_info,btn_cihazApi);
 
     }
 

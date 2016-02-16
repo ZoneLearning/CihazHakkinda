@@ -7,30 +7,28 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by User on 17.2.2016.
+ * Created by SalihaYesilyurt on 17.2.2016.
  */
-public class Camera implements View.OnClickListener {
+public class Camera extends BaseControl {
 
-    private TextView textView;
-    private Button btn;
-    Context c;
-
-    public Camera (Context context, TextView text, Button button){
-        c=context;
-        textView=text;
-        btn=button;
-
-        btn.setOnClickListener(this);
+    /* extends BaseControl dediğimiz anda bunu yazmayı zorunlu kılar. Hata verir.
+     Bu sınıfı BaseControl den extend etmişsin ama onun 3 parametreli constructor ı var
+     onu belirt diye. super ile BaseControl sınıfının constructor'ını kullanabiliriz.
+     IKKAT!! --> zaten biz extends BaseControl dediğimizde hata veriyor. Alt+Enter diyince onu düzeltmemiz için
+     create constructor matching super hatasını çıkarıyor. Enter dediğimizde aşağıdaki ifadyi kendisi yazıyor,
+     elle yazmanıza gerek yok  */
+    public Camera(Context context, TextView text, Button button) {
+        super(context, text, button);
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == btn.getId()){
+        if (v.getId() == btn.getId()) {
             PackageManager packageManager = c.getPackageManager();
-            if(packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT)){
-                textView.setText("Haydi selfi çekelim");
-            }else{
-                textView.setText("Kamera yok");
+            if (packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT)) {
+                tv_info.setText("Haydi selfi çekelim");
+            } else {
+                tv_info.setText("Kamera yok");
             }
 
         }

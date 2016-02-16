@@ -3,6 +3,8 @@
 
 
     <string name="btn_click">Tıkla Bakalım</string>
-    <string name="tv_camera">Ne olacak?</string>
+    <string name="tv_info">Ne olacak?</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_cihaz_ozellikleri">Cihaz Özellikleri Neler?</string>
+    <string name="btn_cihaz_api">Cihazin API Nedir?</string>
 </resources>
