@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CihazHakkinda</string>
+
+
+    <string name="btn_click">Tıkla Bakalım</string>
+    <string name="tv_camera">Ne olacak?</string>
+    <string name="action_settings">Settings</string>
+</resources>
