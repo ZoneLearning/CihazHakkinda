@@ -23,6 +23,7 @@ public class Camera extends BaseControl {
 
     @Override
     public void onClick(View v) {
+        super.onClick(v);
         if (v.getId() == btn.getId()) {
             PackageManager packageManager = c.getPackageManager();
             if (packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT)) {

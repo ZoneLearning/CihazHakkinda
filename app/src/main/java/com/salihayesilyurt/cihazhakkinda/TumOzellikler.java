@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by User on 17.2.2016.
+ * Created by SalihaYesilyurt on 17.2.2016.
  */
 public class TumOzellikler extends BaseControl {
     public TumOzellikler(Context context, TextView text, Button button) {
@@ -17,6 +17,7 @@ public class TumOzellikler extends BaseControl {
 
     @Override
     public void onClick(View view) {
+        super.onClick(view);
         if (view.getId() == btn.getId()) {
             PackageManager packageManager = c.getPackageManager();
             FeatureInfo[] featuresList = packageManager.getSystemAvailableFeatures();

@@ -16,6 +16,7 @@ public class CihazAPI extends BaseControl {
 
     @Override
     public void onClick(View view) {
+        super.onClick(view);
         if (view.getId() == btn.getId()) {
 
             tv_info.setText("Bu cihazın API'si : " + Integer.toString(Build.VERSION.SDK_INT));

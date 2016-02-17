@@ -7,4 +7,6 @@
     <string name="action_settings">Settings</string>
     <string name="btn_cihaz_ozellikleri">Cihaz Özellikleri Neler?</string>
     <string name="btn_cihaz_api">Cihazin API Nedir?</string>
+    <string name="btn_call">Arama Yap</string>
+    <string name="et_call_hint">Arama yapılacak tel no giriniz.</string>
 </resources>
