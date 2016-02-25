@@ -20,6 +20,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initialize();
+
+
+        Camera camera = new Camera(this, tv_info, btn_camera);
+        TumOzellikler tumOzellikler = new TumOzellikler(this,tv_info,btn_cihazOzellikleri);
+        CihazAPI cihazAPI = new CihazAPI(this,tv_info,btn_cihazApi);
+        AramaYap aramaYap = new  AramaYap(this,et_call,btn_call);
+
+    }
+
+    private void initialize() {
 
         tv_info = (TextView) findViewById(R.id.tv_info);
         btn_camera = (Button) findViewById(R.id.btn_click);
@@ -27,12 +38,6 @@ public class MainActivity extends AppCompatActivity {
         btn_cihazApi = (Button) findViewById(R.id.btn_cihaz_api);
         et_call = (EditText) findViewById(R.id.et_phone);
         btn_call = (Button) findViewById(R.id.btn_call);
-
-        Camera camera = new Camera(this, tv_info, btn_camera);
-        TumOzellikler tumOzellikler = new TumOzellikler(this,tv_info,btn_cihazOzellikleri);
-        CihazAPI cihazAPI = new CihazAPI(this,tv_info,btn_cihazApi);
-        AramaYap aramaYap = new  AramaYap(this,et_call,btn_call);
-
     }
 
 }
